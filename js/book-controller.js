@@ -16,7 +16,6 @@ function renderBooks() {
            <div class="info">
 	          <h4>${book.name}</h4>
 	          <p class="id">${book._id}</p>
-	          <h4>${book.price}$</h4>
            </div>
              <div class="actions flex">
                  <button class="btn remove-btn">Delete</button>
@@ -25,7 +24,6 @@ function renderBooks() {
                  </li>`
 	})
 
-	// <button class="btn details-btn">Details</button>
 	$('.books-container').html(strHTML)
 	btnActions()
 }
@@ -58,7 +56,6 @@ function onReadBook(id) {
 	const $elDetailsModal = $('.details-modal')
 	$elDetailsModal.children('.name').text(book.name)
 	$elDetailsModal.children('img').attr('src', book.img)
-	$elDetailsModal.children('.price').text(book.price)
 	$elDetailsModal.children('.id').text(book._id)
 	$elDetailsModal.children('.author').text(book.author)
 	$elDetailsModal.children('.desc').text(book.desc)
@@ -73,10 +70,9 @@ function onUpdateBook(id) {
 	const $elEditModal = $('.edit-modal')
 	const $elEditForm = $('.edit-form')
 
-	$elEditForm.children('.title').text(book.name)
+	$elEditForm.children('.title').text(editTitle)
 	$elEditForm.children('.name').val(book.name)
 	$elEditForm.children('.img').val(book.img)
-	$elEditForm.children('.price').val(book.price)
 	$elEditForm.children('.author').val(book.author)
 	$elEditForm.children('.desc').val(book.desc)
 	$elEditForm.children('.rate').val(book.rate)

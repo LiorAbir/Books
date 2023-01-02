@@ -133,13 +133,24 @@ body {
 .edit-modal {
 	flex-direction: column;
 	justify-content: space-between;
+	/* align-items: center; */
 }
 
 .edit-form {
 	flex-direction: column;
 	justify-content: space-between;
+	position: relative;
+	padding: 1rem;
+	flex-grow: 1;
+	margin-bottom: 2rem;
 }
 
 .logo span {
 	color: rgb(217 170 99);
 }
+
+/* .save-btn {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+} */
