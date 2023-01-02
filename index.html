@@ -12,15 +12,12 @@
 <body>
     <header class="app-header">
         <h1>book library</h1>
+        <button onclick="onUpdateBook()">Add Book</button>
     </header>
     <main class="app-container">
         <section class="book-list">
             <ul class="books-container clean-list card-grid"></ul>
         </section>
-
-        <div class="edit-modal">
-
-        </div>
 
         <div class="modal details-modal" hidden>
             <img src="" alt="book-img">
@@ -31,6 +28,21 @@
             <p class="desc"></p>
             <p>Rate: <span></span></p>
             <button onclick="onCloseModal()">Close</button>
+        </div>
+
+        <div class="modal edit-modal" hidden>
+            <form onsubmit="onSaveBook(ev)" class="edit-form flex">
+                <h2 class="title"></h2>
+                <input type="text" class="name" placeholder="Enter book name">
+                <input type="text" class="img" placeholder="Enter image URL">
+                <input type="number" class="price" placeholder="Enter book price">
+                <input type="text" class="author" placeholder="Enter book author">
+                <textarea class="desc" name="" id="" cols="30" rows="10"
+                    placeholder="Enter book description"></textarea>
+                <input type="number" class="rate" placeholder="Enter book rate">
+                <button>Save</button>
+            </form>
+            <button class="btn save-btn" onclick="onCloseModal()">Close</button>
         </div>
 
     </main>

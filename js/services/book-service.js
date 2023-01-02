@@ -15,6 +15,18 @@ function getBookById(id) {
 	return book
 }
 
+function getEmptyBook() {
+	return {
+		_id: _makeId(),
+		name: '',
+		author: '',
+		price: 0,
+		desc: '',
+		img: '',
+		rate: 0,
+	}
+}
+
 function _createBooks() {
 	const books = JSON.parse(localStorage.getItem(BOOKS_KEY))
 	gBooks = !books || !books.length ? _getBooks() : books
@@ -46,4 +58,13 @@ function _getBooks() {
 			rate: 0,
 		},
 	]
+}
+
+function _makeId(length = 3) {
+	const possible = '123456789'
+	var txt = ''
+	for (var i = 0; i < length; i++) {
+		txt += possible.charAt(Math.floor(Math.random() * possible.length))
+	}
+	return txt
 }
