@@ -47,3 +47,18 @@ a {
 button:hover {
 	cursor: pointer;
 }
+
+.btn {
+	background-color: white;
+	border: 1px solid rgb(217 170 99);
+	color: rgb(217 170 99);
+	padding: 4px 9px;
+	border-radius: 17px;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background-color: rgb(217 170 99);
+	color: white;
+	border-color: white;
+}

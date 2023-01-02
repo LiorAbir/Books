@@ -13,17 +13,19 @@ function renderBooks() {
 	const strHTML = books.map((book) => {
 		return `<li class="book-preview flex" data-book-id="${book._id}">
 	       <img src="${book.img}" alt="book image">
-	       <h4>${book.name}</h4>
-	       <p class="id">${book._id}</p>
-	       <h4>${book.price}$</h4>
+           <div class="info">
+	          <h4>${book.name}</h4>
+	          <p class="id">${book._id}</p>
+	          <h4>${book.price}$</h4>
+           </div>
              <div class="actions flex">
                  <button class="btn remove-btn">Delete</button>
                  <button class="btn edit-btn">Edit</button>
-                 <button class="btn details-btn">Details</button>
-             </div>
-	    </li>`
+                 </div>
+                 </li>`
 	})
 
+	// <button class="btn details-btn">Details</button>
 	$('.books-container').html(strHTML)
 	btnActions()
 }
@@ -34,8 +36,8 @@ function btnActions() {
 		onRemoveBook(bookId + '')
 	})
 
-	$('.details-btn').on('click', function () {
-		const bookId = $(this).closest('[data-book-id]').data('bookId')
+	$('.book-preview').on('click', function () {
+		const bookId = $(this).data('bookId')
 		onReadBook(bookId + '')
 	})
 

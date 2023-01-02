@@ -60,10 +60,41 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
+}
+
+.book-preview:hover {
+	box-shadow: 0 0 5px 0px rgb(217 170 99);
+	cursor: pointer;
+}
+
+.info {
+	text-align: center;
 }
 
 .book-preview img {
 	height: 70%;
+}
+
+.book-preview .id {
+	color: rgb(180, 180, 180);
+	font-size: 13px;
+}
+
+.book-preview h4:hover {
+	text-decoration: underline;
+}
+
+.book-preview .remove-btn {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+}
+
+.book-preview .edit-btn {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
 }
 
 /* FOOTER */
