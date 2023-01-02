@@ -11,6 +11,9 @@ body {
 .app-header {
 	background-color: lightcyan;
 	padding: 1rem;
+
+	justify-content: space-between;
+	align-items: center;
 }
 
 /* CONTAINER */

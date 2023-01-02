@@ -27,6 +27,12 @@ function getEmptyBook() {
 	}
 }
 
+function removeBook(id) {
+	const bookIdx = gBooks.findIndex((book) => book._id === id)
+	gBooks.splice(bookIdx, 1)
+	_saveToStorage(BOOKS_KEY, gBooks)
+}
+
 function _createBooks() {
 	const books = JSON.parse(localStorage.getItem(BOOKS_KEY))
 	gBooks = !books || !books.length ? _getBooks() : books

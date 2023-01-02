@@ -46,7 +46,8 @@ function btnActions() {
 }
 
 function onRemoveBook(id) {
-	console.log(id)
+	removeBook(id)
+	renderBooks()
 }
 
 function onReadBook(id) {
@@ -60,9 +61,6 @@ function onReadBook(id) {
 	$elDetailsModal.children('.author').text(book.author)
 	$elDetailsModal.children('.desc').text(book.desc)
 
-	$('.save-btn').on('click', function () {
-		onSaveBook(id)
-	})
 	onOpenModal($elDetailsModal)
 }
 
@@ -71,15 +69,19 @@ function onUpdateBook(id) {
 	const editTitle = id ? 'Book Edit' : 'Add Book'
 
 	const $elEditModal = $('.edit-modal')
-	const $elEditform = $('.edit-form')
+	const $elEditForm = $('.edit-form')
 
-	$elEditform.children('.title').text(book.name)
-	$elEditform.children('.name').val(book.name)
-	$elEditform.children('.img').val(book.img)
-	$elEditform.children('.price').val(book.price)
-	$elEditform.children('.author').val(book.author)
-	$elEditform.children('.desc').val(book.desc)
-	$elEditform.children('.rate').val(book.rate)
+	$elEditForm.children('.title').text(book.name)
+	$elEditForm.children('.name').val(book.name)
+	$elEditForm.children('.img').val(book.img)
+	$elEditForm.children('.price').val(book.price)
+	$elEditForm.children('.author').val(book.author)
+	$elEditForm.children('.desc').val(book.desc)
+	$elEditForm.children('.rate').val(book.rate)
+
+	$('.edit-btn').on('submit', function () {
+		onSaveBook($elEditForm, id)
+	})
 
 	onOpenModal($elEditModal)
 }
