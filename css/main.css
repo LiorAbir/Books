@@ -11,7 +11,6 @@ body {
 /* HEADER */
 .app-header {
 	padding: 1rem;
-
 	justify-content: space-between;
 	align-items: center;
 }
@@ -26,7 +25,7 @@ body {
 
 .book-list {
 	padding: 1rem;
-	height: 80vh;
+	height: 70vh;
 	background-color: white;
 	overflow: scroll;
 	overflow-x: hidden;
@@ -100,14 +99,18 @@ body {
 /* FOOTER */
 .app-footer {
 	background-color: white;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
 }
 
 /* MODALS */
 .modal {
 	position: absolute;
 	top: 10px;
-	right: 20px;
-	left: 20px;
+	right: 15px;
+	left: 15px;
 	height: 90%;
 	background-color: white;
 	padding: 1rem;
@@ -135,4 +138,8 @@ body {
 .edit-form {
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.logo span {
+	color: rgb(217 170 99);
 }

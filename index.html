@@ -11,8 +11,8 @@
 
 <body>
     <header class="app-header flex">
-        <h1>book library</h1>
-        <button onclick="onUpdateBook()">Add Book</button>
+        <h1 class="logo">BOOKS<span>collection</span></h1>
+        <button onclick="onUpdateBook()" class="btn add-btn">Add Book</button>
     </header>
     <main class="app-container">
         <section class="book-list">
@@ -27,7 +27,7 @@
             <p class="author">Author: <span></span></p>
             <p class="desc"></p>
             <p>Rate: <span></span></p>
-            <button onclick="onCloseModal()">Close</button>
+            <button class="btn close-btn" onclick="onCloseModal()">Close</button>
         </div>
 
         <div class="modal edit-modal" hidden>
@@ -40,14 +40,15 @@
                 <textarea class="desc" name="" id="" cols="30" rows="10"
                     placeholder="Enter book description"></textarea>
                 <input type="number" class="rate" placeholder="Enter book rate">
-                <button>Save</button>
+                <button class="btn save-btn">Save</button>
             </form>
-            <button class="btn save-btn" onclick="onCloseModal()">Close</button>
+            <button class="btn close-btn" onclick="onCloseModal()">Close</button>
         </div>
 
     </main>
-    <footer class="app-footer">
-        <h1>footer</h1>
+    <footer class="app-footer flex">
+        <h1 class="logo">BOOKS<span>collection</span></h1>
+        <p>Simple vanilla JS and jQuery app with MVC architecture</p>
     </footer>
 
     <!-- SCRIPT -->
