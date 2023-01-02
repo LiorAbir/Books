@@ -6,12 +6,19 @@ var gBooks
 _createBooks()
 
 function getBooksToDisplay() {
-	const books = gBooks
-	return books
+	const filteredBooks = gBooks
+	return filteredBooks
+}
+
+function getBookById(id) {
+	console.log(gBooks)
+	console.log(id, 'id')
+	const book = gBooks.find((book) => book._id === id)
+	return book
 }
 
 function _createBooks() {
-	const books = localStorage.getItem(BOOKS_KEY)
+	const books = JSON.parse(localStorage.getItem(BOOKS_KEY))
 	gBooks = !books || !books.length ? _getBooks() : books
 	_saveToStorage(BOOKS_KEY, gBooks)
 }
