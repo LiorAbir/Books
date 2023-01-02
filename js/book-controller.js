@@ -46,5 +46,22 @@ function onRemoveBook(id) {
 
 function onReadBook(id) {
 	const book = getBookById(id)
-	console.log(book)
+	console.log('kk')
+	const $elDetailsModal = $('.details-modal')
+	$elDetailsModal.children('.name').text(book.name)
+	$elDetailsModal.children('img').attr('src', book.img)
+	$elDetailsModal.children('.price').text(book.price)
+	$elDetailsModal.children('.id').text(book._id)
+	$elDetailsModal.children('.author').text(book.author)
+	$elDetailsModal.children('.desc').text(book.desc)
+
+	console.log($elDetailsModal)
+
+	// $elDetailsModal.addClass('open')
+	$elDetailsModal.show('slow')
+	$elDetailsModal.fadeIn('slow')
+}
+
+function onCloseModal() {
+	$('.modal').fadeOut('fast')
 }

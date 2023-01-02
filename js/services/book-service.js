@@ -11,8 +11,6 @@ function getBooksToDisplay() {
 }
 
 function getBookById(id) {
-	console.log(gBooks)
-	console.log(id, 'id')
 	const book = gBooks.find((book) => book._id === id)
 	return book
 }
