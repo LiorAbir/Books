@@ -119,6 +119,7 @@ body {
 	transition: 0.3s;
 
 	display: flex;
+	display: none;
 }
 
 .details-modal {
