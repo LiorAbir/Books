@@ -5,11 +5,11 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	background-color: rgb(249 243 238);
 }
 
 /* HEADER */
 .app-header {
-	background-color: lightcyan;
 	padding: 1rem;
 
 	justify-content: space-between;
@@ -21,9 +21,37 @@ body {
 	padding: 1rem;
 	flex-grow: 1;
 	position: relative;
-
 	overflow-x: hidden;
 }
+
+.book-list {
+	padding: 1rem;
+	height: 80vh;
+	background-color: white;
+	overflow: scroll;
+	overflow-x: hidden;
+
+	/* width */
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgb(249 243 238);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgb(217 170 99);
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+} */
 
 .book-preview {
 	padding: 1rem;
@@ -40,7 +68,7 @@ body {
 
 /* FOOTER */
 .app-footer {
-	background-color: lightpink;
+	background-color: white;
 }
 
 /* MODALS */
@@ -60,10 +88,8 @@ body {
 }
 
 .details-modal {
-	justify-content: center;
-	align-items: center;
-	/* width: 80%;
-	height: 70%; */
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .details-modal img {
